@@ -3,7 +3,7 @@ import { Outlet } from 'react-router';
 function PublicMain() {
   return (
     <main>
-      <div><Outlet /></div>
+      <Outlet />
     </main>
   )
 }
