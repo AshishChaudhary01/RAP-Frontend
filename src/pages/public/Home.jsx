@@ -1,8 +1,8 @@
-import FaqsSection from "../../components/public/FaqsSection"
-import FeaturesSection from "../../components/public/FeaturesSection"
-import HeroSection from "../../components/public/HeroSection"
-import StatsSection from "../../components/public/StatsSection"
-import TestimonialSection from "../../components/public/TestimonialSection"
+import FaqsSection from "../../components/public/sections/Faqs"
+import FeaturesSection from "../../components/public/sections/Features"
+import HeroSection from "../../components/public/sections/Hero"
+import StatsSection from "../../components/public/sections/Stats"
+import TestimonialSection from "../../components/public/sections/Testimonial"
 
 function Home() {
   return (

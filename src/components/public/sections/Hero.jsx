@@ -1,5 +1,4 @@
-import { NavLink } from 'react-router'
-import GetStartedButton from './GetStartedButton'
+import GetStartedButton from '../GetStartedButton'
 
 function HeroSection() {
   return (

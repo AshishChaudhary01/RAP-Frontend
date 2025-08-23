@@ -6,9 +6,8 @@ import GetStartedButton from "./GetStartedButton";
 
 const navLinks = [
   { name: "Home", to: "/" },
-  { name: "About Us", to: "/about-us" },
   { name: "Our Services", to: "/our-services" },
-  { name: "Blog", to: "/blog" },
+  { name: "Our Team", to: "/our-team" },
   { name: "Contact Us", to: "/contact-us" },
 ];
 
@@ -52,9 +51,16 @@ function PublicHeader() {
         {/* Desktop Nav */}
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           {navLinks.map((link) => (
-            <NavLink key={link.to} to={link.to} className={linkClasses}>
+            <NavLink
+              key={link.to}
+              to={link.to}
+              className={({ isActive }) =>
+                `${linkClasses} ${isActive ? "text-indigo-600 border-b-2 border-indigo-600" : ""}`
+              }
+            >
               {link.name}
             </NavLink>
+
           ))}
         </PopoverGroup>
 
@@ -95,9 +101,16 @@ function PublicHeader() {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 {navLinks.map((link) => (
-                  <NavLink key={link.to} to={link.to} className={mobileLinkClasses}>
+                  <NavLink
+                    key={link.to}
+                    to={link.to}
+                    className={({ isActive }) =>
+                      `${mobileLinkClasses} ${isActive ? "bg-gray-100 text-indigo-600" : ""}`
+                    }
+                  >
                     {link.name}
                   </NavLink>
+
                 ))}
               </div>
 

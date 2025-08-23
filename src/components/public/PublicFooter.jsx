@@ -23,7 +23,7 @@ const footerLinks = [
   {
     title: "Company",
     links: [
-      { name: "About Us", href: "https://www.google.com" },
+      { name: "Our Team", href: "https://www.google.com" },
       { name: "Services", href: "https://www.example.com" },
       { name: "Pricing", href: "https://www.example.com" },
       { name: "Contact", href: "https://www.example.com" },
@@ -41,7 +41,7 @@ const footerLinks = [
   {
     title: "Company",
     links: [
-      { name: "About Us", href: "https://www.google.com" },
+      { name: "Our Team", href: "https://www.google.com" },
       { name: "Services", href: "https://www.google.com" },
       { name: "Pricing", href: "https://www.google.com" },
       { name: "Contact", href: "https://www.google.com" },

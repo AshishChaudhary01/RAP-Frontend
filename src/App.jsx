@@ -12,8 +12,7 @@ import AdminLayout from './layouts/AdminLayout'
 import Home from './pages/public/Home'
 import OurServices from './pages/public/OurServices'
 import ContactUs from './pages/public/ContactUs'
-import AboutUs from './pages/public/AboutUs'
-import Blog from './pages/public/Blog'
+import OurTeam from './pages/public/OurTeam'
 import Login from './pages/public/Login'
 import AuthenticatoinLayout from './layouts/AuthenticatoinLayout'
 import SignUp from './pages/public/SignUp'
@@ -27,9 +26,8 @@ function App() {
           {/* Public Routing */}
           <Route path="/" element={<PublicLayout />}>
             <Route path="" element={<Home />} />
-            <Route path="about-us" element={<AboutUs />} />
+            <Route path="our-team" element={<OurTeam />} />
             <Route path="our-services" element={<OurServices />} />
-            <Route path="blog" element={<Blog />} />
             <Route path="contact-us" element={<ContactUs />} />
           </Route>
 
