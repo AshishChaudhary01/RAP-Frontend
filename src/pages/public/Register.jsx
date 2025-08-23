@@ -1,7 +1,8 @@
 import { NavLink } from "react-router"
 
-function Login() {
+function Register() {
   return (
+
     <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
         <img
@@ -10,7 +11,7 @@ function Login() {
           className="mx-auto h-10 w-auto"
         />
         <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">
-          Login to your account
+          Create a new account
         </h2>
       </div>
 
@@ -55,27 +56,19 @@ function Login() {
               type="submit"
               className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
-              Sign in
+              Register
             </button>
           </div>
         </form>
 
         <div className="mt-5 text-center text-sm/6 text-gray-500">
-          <div>
-            <a
-              href="#"
-              className="font-semibold text-indigo-600 hover:text-indigo-500"
-            >
-              Forgot password?
-            </a>
-          </div>
           <div className="mt-5">
-            Not a user?{' '}
+            Already have an account?{' '}
             <NavLink
-              to={"/auth/register"}
+              to={"/auth/login"}
               className="font-semibold text-indigo-600 hover:text-indigo-500"
             >
-              Click here to register
+              Click here to login
             </NavLink>
           </div>
         </div>
@@ -84,4 +77,4 @@ function Login() {
   )
 }
 
-export default Login
+export default Register

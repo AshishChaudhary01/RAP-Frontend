@@ -14,8 +14,8 @@ import OurServices from './pages/public/OurServices'
 import ContactUs from './pages/public/ContactUs'
 import OurTeam from './pages/public/OurTeam'
 import Login from './pages/public/Login'
+import Register from './pages/public/Register'
 import AuthenticatoinLayout from './layouts/AuthenticatoinLayout'
-import SignUp from './pages/public/SignUp'
 import Dashboard from './pages/admin/Dashboard'
 
 function App() {
@@ -34,7 +34,7 @@ function App() {
           {/* Authentication Routing */}
           <Route path='/auth' element={<AuthenticatoinLayout />} >
             <Route path='login' element={<Login />}/>
-            <Route path='sign-up' element={<SignUp />}/>
+            <Route path='register' element={<Register />}/>
           </Route>
 
           {/* Customer Routing */}

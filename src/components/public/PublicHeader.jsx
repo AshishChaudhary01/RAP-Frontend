@@ -32,7 +32,7 @@ function PublicHeader() {
               src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
               className="h-8 w-auto"
             />
-            <span className="text-indigo-800 text-2xl font-extrabold">RAP</span>
+            <p className="hidden text-indigo-800 text-2xl font-extrabold md:block">RAP</p>
           </NavLink>
         </div>
 
@@ -116,15 +116,6 @@ function PublicHeader() {
 
               {/* Extra Links */}
               <div className="py-6 space-y-2">
-                <NavLink to="/login" className={mobileLinkClasses}>
-                  Login
-                </NavLink>
-                <NavLink
-                  to="/signup"
-                  className={`${mobileLinkClasses} underline`}
-                >
-                  Signup
-                </NavLink>
                 <GetStartedButton />
               </div>
             </div>
