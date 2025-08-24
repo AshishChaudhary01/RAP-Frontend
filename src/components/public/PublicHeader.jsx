@@ -65,7 +65,15 @@ function PublicHeader() {
         </PopoverGroup>
 
         {/* Desktop CTA */}
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-6">
+          <div className="flex gap-x-4 items-center font-semibold">
+            <NavLink to={"/auth/login"}>
+              Login
+            </NavLink>
+            <NavLink to={"/auth/register"}>
+              Register
+            </NavLink>
+          </div>
           <GetStartedButton />
         </div>
       </nav>
@@ -116,6 +124,14 @@ function PublicHeader() {
 
               {/* Extra Links */}
               <div className="py-6 space-y-2">
+                <div className="flex gap-x-6 items-center font-semibold">
+                  <NavLink to={"/auth/login"}>
+                    Login
+                  </NavLink>
+                  <NavLink to={"/auth/register"}>
+                    Register
+                  </NavLink>
+                </div>
                 <GetStartedButton />
               </div>
             </div>
