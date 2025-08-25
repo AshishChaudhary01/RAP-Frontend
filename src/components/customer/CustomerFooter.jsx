@@ -26,23 +26,31 @@ function CustomerFooter() {
     },
   ]
 
-  const itemClasses = "flex flex-col text-gray-600";
+  const itemClasses = ({ isActive }) =>
+    `flex flex-col items-center text-sm transition-colors duration-200
+   ${isActive ? "text-indigo-600 font-semibold" : "text-gray-600 hover:text-indigo-500"}`;
+
   const iconClasses = "h-5 w-auto";
 
   return (
     <footer className="sticky bottom-0 z-10 bg-indigo-100">
-      <nav className="mx-auto justify-around p-3 md:p-4 max-w-2xl">
+      <nav className="mx-auto justify-around p-3 max-w-2xl">
         <ul className="flex justify-around gap-x-4 text-sm">
-          {menuItems.map((item) => {
-            return (
-              <li>
-                <NavLink to={item.to} className={itemClasses} >
-                  <div className="flex mx-auto mb-2">{<item.icon className={iconClasses}/>}</div>
-                  <div>{item.name}</div>
-                </NavLink>
-              </li>
-            );
-          })}
+          {menuItems.map((item) => (
+            <li key={item.to}>
+              <NavLink
+                to={item.to}
+                // Don’t match partial paths, only mark me active if the path matches exactly.
+                end={item.to === "/customer"}
+                className={itemClasses}
+              >
+                <div className="flex mx-auto mb-2">
+                  <item.icon className={iconClasses} />
+                </div>
+                <div>{item.name}</div>
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </nav>
     </footer>
