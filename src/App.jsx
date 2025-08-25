@@ -7,7 +7,6 @@ import CustomerHome from './pages/customer/CustomerHome'
 import Rentals from './pages/customer/Rentals'
 import AddListing from './pages/customer/AddListing'
 import MyListings from './pages/customer/MyListings'
-import Menu from './pages/customer/Menu'
 import AdminLayout from './layouts/AdminLayout'
 import Home from './pages/public/Home'
 import OurServices from './pages/public/OurServices'
@@ -17,6 +16,11 @@ import Login from './pages/public/Login'
 import Register from './pages/public/Register'
 import AuthenticatoinLayout from './layouts/AuthenticatoinLayout'
 import Dashboard from './pages/admin/Dashboard'
+import CustomerSettingsLayout from './layouts/CustomerSettingsLayout'
+import MyProfile from './pages/customer/settings/MyProfile'
+import PersonalInformation from './pages/customer/settings/PersonalInformation'
+import Review from './pages/customer/settings/Review'
+import Verification from './pages/customer/settings/Verification'
 
 function App() {
   return (
@@ -33,8 +37,8 @@ function App() {
 
           {/* Authentication Routing */}
           <Route path='/auth' element={<AuthenticatoinLayout />} >
-            <Route path='login' element={<Login />}/>
-            <Route path='register' element={<Register />}/>
+            <Route path='login' element={<Login />} />
+            <Route path='register' element={<Register />} />
           </Route>
 
           {/* Customer Routing */}
@@ -43,7 +47,14 @@ function App() {
             <Route path='rentals' element={<Rentals />} />
             <Route path='add-listing' element={<AddListing />} />
             <Route path='my-listings' element={<MyListings />} />
-            <Route path='menu' element={<Menu />} />
+          </Route>
+
+          {/* Customer Settings Layout */}
+          <Route path='settings' element={<CustomerSettingsLayout />}>
+            <Route path='my-profile' element={<MyProfile />} />
+            <Route path='personal-information' element={<PersonalInformation />} />
+            <Route path='review' element={<Review />} />
+            <Route path='verification' element={<Verification />} />
           </Route>
 
           {/* Admin Routing */}

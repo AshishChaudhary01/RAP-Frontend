@@ -1,10 +1,10 @@
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
-import { HiOutlineIdentification, HiOutlineSearch, HiOutlineStar, HiOutlineUser } from 'react-icons/hi'
+import { HiOutlineIdentification, HiOutlineStar, HiOutlineUser } from 'react-icons/hi'
 import { HiOutlineArrowRightOnRectangle, HiOutlineCheckBadge } from 'react-icons/hi2'
 import { NavLink } from 'react-router'
 
-// Menu Items values
-function CustomerHeader() {
+function CustomerSettingsHeader() {
+
   const menuItems = [
     {
       name: "Profile",
@@ -32,7 +32,6 @@ function CustomerHeader() {
       to: "/",
     },
   ]
-
   const menuItemClasses = "block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden";
 
   return (
@@ -53,16 +52,6 @@ function CustomerHeader() {
             />
             <p className="hidden text-indigo-800 text-2xl font-extrabold md:block">RAP</p>
           </NavLink>
-        </div>
-
-        {/* Search bar */}
-        <div className="w-2/4 md:max-w-2xl flex justify-center items-center gap-x-1 md:gap-x-4">
-          <input id="search-item" name="search-item" type="search" className="shadow outline-1 outline-gray-300 rounded-md w-full py-2 px-6
-           focus:shadow-lg" placeholder="Search" />
-          <div className="flex justify-center items-center rounded-md bg-indigo-600 py-2 px-2 gap-x-2 h-full min-w-min text-white">
-            <HiOutlineSearch className="h-6 min-w-min md:h-5 " />
-            <span className="hidden sm:block">Search</span>
-          </div>
         </div>
 
         {/* Profile/Menu Button  */}
@@ -93,4 +82,4 @@ function CustomerHeader() {
   )
 }
 
-export default CustomerHeader
+export default CustomerSettingsHeader
