@@ -37,14 +37,14 @@ function CustomerHeader() {
 
   return (
 
-    <header className="bg-white top-0 z-10 shadow">
+    <header className="bg-white top-0 z-10 shadow sticky">
       <nav
         aria-label="Global"
         className="mx-auto sticky flex justify-between items-center max-w-7xl p-3 lg:px-8 gap-x-4"
       >
         {/* Logo */}
         <div className="flex">
-          <NavLink to="/" className="-m-1.5 p-1.5 flex items-center gap-6">
+          <NavLink to="/customer" className="-m-1.5 p-1.5 flex items-center gap-6">
             <span className="sr-only">RAP</span>
             <img
               alt="RAP Logo"
@@ -56,7 +56,7 @@ function CustomerHeader() {
         </div>
 
         {/* Search bar */}
-        <div className="w-2/4 md:w-2/5 flex justify-center items-center gap-x-1 md:gap-x-4">
+        <div className="w-2/4 md:max-w-2xl flex justify-center items-center gap-x-1 md:gap-x-4">
           <input id="search-item" name="search-item" type="search" className="shadow outline-1 outline-gray-300 rounded-md w-full py-2 px-6
            focus:shadow-lg" placeholder="Search" />
           <div className="flex justify-center items-center rounded-md bg-indigo-600 py-2 px-2 gap-x-2 h-full min-w-min text-white">

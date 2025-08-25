@@ -3,8 +3,9 @@ import { Outlet } from 'react-router'
 function CustomerMain() {
   return (
     <main>
-      <div>Customer Main</div>
-      <div><Outlet /></div>
+      <div className="mx-auto max-w-7xl lg:p-8 p-4">
+        <Outlet />
+      </div>
     </main>
   )
 }
