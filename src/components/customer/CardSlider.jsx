@@ -35,7 +35,7 @@ function CardSlider({ items, category }) {
                 </div>
               </Link>
             ))}
-            {/* More card */}
+            {/* More option card*/}
             <div className="flex-shrink-0 w-28 md:w-40 lg:w-48 flex flex-col items-center justify-center rounded-lg bg-gray-100 shadow hover:bg-gray-200 cursor-pointer">
               <HiOutlineChevronRight className="h-6 w-6 text-gray-600" />
               <span className="mt-2 text-gray-700 font-medium text-sm">More</span>
