@@ -1,11 +1,14 @@
-import { HiOutlineBookOpen, HiOutlineCollection, HiOutlineFire, HiOutlineGlobeAlt, HiOutlineSparkles } from "react-icons/hi"
+import { HiOutlineBadgeCheck, HiOutlineBookOpen, HiOutlineCollection, HiOutlineFire, HiOutlineGlobeAlt, HiOutlineSparkles } from "react-icons/hi"
+import { HiOutlineWrenchScrewdriver } from "react-icons/hi2";
 import { NavLink } from "react-router"
 
 function CategorySlider() {
 
   const categories = [
+    { name: "Newest", to: "", icon: HiOutlineBadgeCheck },
     { name: "Miscellaneous", to: "miscellaneous", icon: HiOutlineCollection },
     { name: "Outdoor Gears", to: "outdoor-gears", icon: HiOutlineGlobeAlt },
+    { name: "Tools", to: "outdoor-gears", icon: HiOutlineWrenchScrewdriver },
     { name: "Sports", to: "sports", icon: HiOutlineFire },
     { name: "Books", to: "books", icon: HiOutlineBookOpen },
     { name: "Party Supplies", to: "party-supplies", icon: HiOutlineSparkles },
@@ -13,7 +16,7 @@ function CategorySlider() {
 
   const itemClasses = ({ isActive }) =>
     `flex flex-col items-center text-xs transition-colors duration-200 px-1 py-0 md:px-4 md:py-2 text-center
-     ${isActive ? "bg-indigo-600 text-white font-semibold" : " text-gray-500 hover:bg-gray-100"}`;
+     ${isActive ? "bg-gray-200 rounded-md" : " text-gray-500 hover:bg-gray-100"}`;
 
   const iconClasses = "h-auto w-4 md:w-5";
 

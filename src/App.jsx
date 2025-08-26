@@ -1,3 +1,6 @@
+
+import { AuthProvider } from './contexts/AuthContext';
+import { ProtectedRoute, PublicRoute, AdminRoute } from './components/Routes/ProtectedRoutes';
 import { BrowserRouter, Route, Routes } from 'react-router'
 
 import './App.css'
@@ -24,46 +27,56 @@ import Verification from './pages/customer/settings/Verification'
 
 function App() {
   return (
-    <>
+    <AuthProvider>
       <BrowserRouter>
         <Routes>
-          {/* Public Routing */}
+          {/* Public Routes */}
           <Route path="/" element={<PublicLayout />}>
-            <Route path="" element={<Home />} />
+            <Route index path="" element={<Home />} />
             <Route path="our-team" element={<OurTeam />} />
             <Route path="our-services" element={<OurServices />} />
             <Route path="contact-us" element={<ContactUs />} />
           </Route>
 
-          {/* Authentication Routing */}
-          <Route path='/auth' element={<AuthenticatoinLayout />} >
-            <Route path='login' element={<Login />} />
-            <Route path='register' element={<Register />} />
+          {/* Authentication Routes - wrap with PublicRoute */}
+          <Route element={<PublicRoute />}>
+            <Route path='/auth' element={<AuthenticatoinLayout />} >
+              <Route path='login' element={<Login />} />
+              <Route path='register' element={<Register />} />
+            </Route>
           </Route>
 
-          {/* Customer Routing */}
+          {/* Customer Routes - Protected
+          <Route element={<ProtectedRoute />}>
+          </Route> */}
           <Route path='/customer' element={<CustomerLayout />}>
-            <Route path='' element={<CustomerHome />} />
+            <Route index path='' element={<CustomerHome />} />
+            {/* <Route path='listing/:id' element={<Listing />} /> */}
             <Route path='rentals' element={<Rentals />} />
             <Route path='add-listing' element={<AddListing />} />
             <Route path='my-listings' element={<MyListings />} />
           </Route>
 
-          {/* Customer Settings Layout */}
-          <Route path='settings' element={<CustomerSettingsLayout />}>
+          {/* Settings Routes */}
+          <Route path='/settings' element={<CustomerSettingsLayout />}>
             <Route path='my-profile' element={<MyProfile />} />
             <Route path='personal-information' element={<PersonalInformation />} />
             <Route path='review' element={<Review />} />
             <Route path='verification' element={<Verification />} />
           </Route>
 
-          {/* Admin Routing */}
-          <Route path='/admin' element={<AdminLayout />}>
-            <Route path='' element={<Dashboard />} />
+          {/* Admin Routes - wrap with AdminRoute */}
+          <Route element={<AdminRoute />}>
+            <Route path='/admin' element={<AdminLayout />}>
+              <Route path='' element={<Dashboard />} />
+            </Route>
           </Route>
+
+          {/* 404 Route */}
+          {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
       </BrowserRouter>
-    </>
+    </AuthProvider>
   )
 }
 

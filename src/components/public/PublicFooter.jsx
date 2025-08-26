@@ -73,7 +73,7 @@ function PublicFooter() {
         <div className="social-links flex gap-x-4 my-8">
           {socialLinks.map((link) => {
             return (
-              <a href={link.to} rel="noopener noreferrer" target="_blank">
+              <a href={link.to} key={link.name} rel="noopener noreferrer" target="_blank">
                 <link.icon aria-hidden="true" className="size-6 text-white" />
               </a>
             );
