@@ -7,23 +7,27 @@ export const useListingsByCategory = () => {
     newest: [],
     outdoor: [],
     tools: [],
-    nearest: []
   });
-  
+
   const { loading, error, callApi } = useApi();
 
   const fetchListingsByCategory = async () => {
     try {
       const allListings = await callApi(api.getListings);
-      
-      // Filter listings by category (you'll need to update your db.json to include categories)
-      const newestListings = allListings.slice(0, 6); // First 6 listings as newest
-      const outdoorListings = allListings.filter(listing => 
+      console.log('API response:', allListings);
+
+      if (!Array.isArray(allListings)) {
+        throw new Error('Invalid response format from API');
+      }
+
+      const newestListings = allListings.slice(0, 6);
+      const outdoorListings = allListings.filter(listing =>
         listing.category === 'outdoor' || listing.category === 'sports'
       );
-      const toolsListings = allListings.filter(listing => 
+      const toolsListings = allListings.filter(listing =>
         listing.category === 'tools' || listing.category === 'home-garden'
       );
+
       setListingsByCategory({
         newest: newestListings,
         outdoor: outdoorListings,

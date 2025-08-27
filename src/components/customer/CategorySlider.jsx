@@ -5,7 +5,7 @@ import { NavLink } from "react-router"
 function CategorySlider() {
 
   const categories = [
-    { name: "Newest", to: "", icon: HiOutlineBadgeCheck },
+    { name: "Newest", to: "newest", icon: HiOutlineBadgeCheck },
     { name: "Miscellaneous", to: "miscellaneous", icon: HiOutlineCollection },
     { name: "Outdoor Gears", to: "outdoor-gears", icon: HiOutlineGlobeAlt },
     { name: "Tools", to: "outdoor-gears", icon: HiOutlineWrenchScrewdriver },

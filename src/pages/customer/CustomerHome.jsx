@@ -16,7 +16,10 @@ function CustomerHome() {
   if (error) {
     return (
       <div className="rounded-md bg-red-50 p-4 mx-4">
-        <div className="text-sm text-red-700">Error loading listings: {error}</div>
+        <div className="text-sm text-red-700">
+          <div>Error loading listings:</div>
+          <div className="overflow-ellipsis">{error}</div>
+        </div>
       </div>
     );
   }
@@ -27,21 +30,21 @@ function CustomerHome() {
       <CategorySlider />
 
       {/* Newest Listings */}
-      <ListingSlider 
-        items={listingsByCategory.newest} 
-        category="Newest Listings" 
+      <ListingSlider
+        items={listingsByCategory.newest}
+        category="Newest Listings"
       />
 
       {/* Outdoor Gear Listings */}
-      <ListingSlider 
-        items={listingsByCategory.outdoor} 
-        category="Outdoor Gear" 
+      <ListingSlider
+        items={listingsByCategory.outdoor}
+        category="Outdoor Gear"
       />
 
       {/* Tools Listings */}
-      <ListingSlider 
-        items={listingsByCategory.tools} 
-        category="Tools" 
+      <ListingSlider
+        items={listingsByCategory.tools}
+        category="Tools"
       />
     </div>
   );

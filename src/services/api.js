@@ -1,7 +1,15 @@
 // src/services/api.js - Updated with actual fetch calls
 class ApiService {
-  constructor(baseURL = '/') {
+  constructor(baseURL = 'http://localhost:3001') {
     this.baseURL = baseURL;
+
+    // Bind methods to maintain 'this' context
+    this.request = this.request.bind(this);
+    this.getListings = this.getListings.bind(this);
+    this.getListing = this.getListing.bind(this);
+    this.createListing = this.createListing.bind(this);
+    this.updateListing = this.updateListing.bind(this);
+    this.deleteListing = this.deleteListing.bind(this);
   }
 
   async request(endpoint, options = {}) {
@@ -20,11 +28,11 @@ class ApiService {
 
     try {
       const response = await fetch(url, config);
-      
+
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-      
+
       const data = await response.json();
       return data;
     } catch (error) {
@@ -38,28 +46,55 @@ class ApiService {
     {
       id: 1,
       email: 'demo@example.com',
-      password: '1234', // In real app, this would be hashed
-      firstName: 'Demo',
+      password: 'demo',
+      firstName: '1234',
       lastName: 'User',
-      avatar: '/avatars/user1.jpg',
+      avatar: 'https://images.unsplash.com/photo-1740252117070-7aa2955b25f8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGF2YXRhcnxlbnwwfDJ8MHx8fDI%3D',
       isVerified: true,
       rating: 4.5
     }
   ];
 
+  // Use arrow functions to automatically bind 'this'
+  getListings = async () => {
+    return this.request('/listings');
+  }
+
+  getListing = async (id) => {
+    return this.request(`/listings/${id}`);
+  }
+
+  createListing = async (listingData) => {
+    return this.request('/listings', {
+      method: 'POST',
+      body: listingData,
+    });
+  }
+
+  updateListing = async (id, listingData) => {
+    return this.request(`/listings/${id}`, {
+      method: 'PUT',
+      body: listingData,
+    });
+  }
+
+  deleteListing = async (id) => {
+    return this.request(`/listings/${id}`, {
+      method: 'DELETE',
+    });
+  }
+
   async login(credentials) {
-    // For mock data, simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    const user = this.mockUsers.find(u => 
+    // Simulate API call to db.json users
+    const users = await this.request('/users');
+    const user = users.find(u =>
       u.email === credentials.email && u.password === credentials.password
     );
-    
+
     if (!user) {
-      throw new Error('Invalid email or password');
+      throw new Error('Invalid credentials');
     }
 
-    // Return mock response similar to what Spring Boot would return
     return {
       token: 'mock-jwt-token',
       user: {
@@ -73,44 +108,11 @@ class ApiService {
   }
 
   async register(userData) {
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    // Check if user already exists
-    const existingUser = this.mockUsers.find(u => u.email === userData.email);
-    if (existingUser) {
-      throw new Error('User already exists with this email');
-    }
-
-    // Create new user (in real app, this would be saved to db)
-    const newUser = {
-      id: this.mockUsers.length + 1,
-      ...userData,
-      avatar: '/avatars/default.jpg',
-      isVerified: false,
-      rating: 0
-    };
-
-    this.mockUsers.push(newUser);
-
-    return {
-      message: 'User registered successfully',
-      user: {
-        id: newUser.id,
-        email: newUser.email,
-        firstName: newUser.firstName,
-        lastName: newUser.lastName
-      }
-    };
-  }
-
-  // Add other API methods that will work with db.json
-  async getListings() {
-    return this.request('../../public/db').then(data => data.listings || []);
-  }
-
-  async getListing(id) {
-    const listings = await this.getListings();
-    return listings.find(listing => listing.id === parseInt(id));
+    // POST to users endpoint
+    return this.request('/users', {
+      method: 'POST',
+      body: userData
+    });
   }
 }
 

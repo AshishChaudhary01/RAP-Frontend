@@ -1,267 +1,267 @@
 {
   "listings": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Camping Tent",
       "description": "4-person camping tent, waterproof and easy to set up",
       "price": 1000,
       "priceUnit": "day",
       "category": "outdoor",
       "images": [
-        "https://images.unsplash.com/photo-1616848657269-c3c7b227fc65?w=400"
+        "https://images.unsplash.com/photo-1714326029322-fcc1464df757?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA1fHx0ZW50fGVufDB8fDB8fHwy"
       ],
       "location": "Pokhara, Nepal",
       "availability": "available"
     },
     {
-      "id": 2,
-      "title": "Mountain Bike",
-      "description": "27-speed mountain bike, ideal for adventure trails",
-      "price": 1500,
-      "priceUnit": "day",
-      "category": "outdoor",
-      "images": [
-        "https://images.unsplash.com/photo-1616848657269-c3c7b227fc65?w=400"
-      ],
-      "location": "Kathmandu, Nepal",
-      "availability": "available"
-    },
-    {
-      "id": 3,
-      "title": "Kayak",
-      "description": "Durable kayak for lake and river exploration",
-      "price": 1200,
-      "priceUnit": "day",
-      "category": "outdoor",
-      "images": [
-        "https://images.unsplash.com/photo-1616848657269-c3c7b227fc65?w=400"
-      ],
-      "location": "Lumbini, Nepal",
-      "availability": "available"
-    },
-    {
-      "id": 4,
-      "title": "Hiking Backpack",
-      "description": "Large hiking backpack with multiple compartments",
-      "price": 900,
-      "priceUnit": "day",
-      "category": "outdoor",
-      "images": [
-        "https://images.unsplash.com/photo-1616848657269-c3c7b227fc65?w=400"
-      ],
-      "location": "Annapurna, Nepal",
-      "availability": "available"
-    },
-    {
-      "id": 5,
+      "id": "2",
       "title": "Rock Climbing Gear",
       "description": "Full rock climbing kit with ropes and safety harness",
       "price": 1800,
       "priceUnit": "day",
       "category": "outdoor",
       "images": [
-        "https://images.unsplash.com/photo-1616848657269-c3c7b227fc65?w=400"
+        "https://images.unsplash.com/photo-1714326029322-fcc1464df757?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA1fHx0ZW50fGVufDB8fDB8fHwy"
       ],
       "location": "Nagarkot, Nepal",
       "availability": "available"
     },
     {
-      "id": 6,
+      "id": "3",
+      "title": "Kayak",
+      "description": "Durable kayak for lake and river exploration",
+      "price": 1200,
+      "priceUnit": "day",
+      "category": "outdoor",
+      "images": [
+        "https://images.unsplash.com/photo-1714326029322-fcc1464df757?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA1fHx0ZW50fGVufDB8fDB8fHwy"
+      ],
+      "location": "Lumbini, Nepal",
+      "availability": "available"
+    },
+    {
+      "id": "4",
+      "title": "Hiking Backpack",
+      "description": "Large hiking backpack with multiple compartments",
+      "price": 900,
+      "priceUnit": "day",
+      "category": "outdoor",
+      "images": [
+        "https://images.unsplash.com/photo-1714326029322-fcc1464df757?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA1fHx0ZW50fGVufDB8fDB8fHwy"
+      ],
+      "location": "Annapurna, Nepal",
+      "availability": "available"
+    },
+    {
+      "id": "5",
+      "title": "Rock Climbing Gear",
+      "description": "Full rock climbing kit with ropes and safety harness",
+      "price": 1800,
+      "priceUnit": "day",
+      "category": "outdoor",
+      "images": [
+        "https://images.unsplash.com/photo-1714326029322-fcc1464df757?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA1fHx0ZW50fGVufDB8fDB8fHwy"
+      ],
+      "location": "Nagarkot, Nepal",
+      "availability": "available"
+    },
+    {
+      "id": "6",
       "title": "Surfboard",
       "description": "Premium surfboard, lightweight and stable",
       "price": 2000,
       "priceUnit": "day",
       "category": "outdoor",
       "images": [
-        "https://images.unsplash.com/photo-1616848657269-c3c7b227fc65?w=400"
+        "https://images.unsplash.com/photo-1714326029322-fcc1464df757?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA1fHx0ZW50fGVufDB8fDB8fHwy"
       ],
       "location": "Chitwan, Nepal",
       "availability": "available"
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Snowboard",
       "description": "Professional snowboard for snowy terrains",
       "price": 2200,
       "priceUnit": "day",
       "category": "outdoor",
       "images": [
-        "https://images.unsplash.com/photo-1616848657269-c3c7b227fc65?w=400"
+        "https://images.unsplash.com/photo-1714326029322-fcc1464df757?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA1fHx0ZW50fGVufDB8fDB8fHwy"
       ],
       "location": "Manang, Nepal",
       "availability": "available"
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "Photography Drone",
       "description": "Drone with 4K camera, perfect for outdoor shoots",
       "price": 3500,
       "priceUnit": "day",
       "category": "outdoor",
       "images": [
-        "https://images.unsplash.com/photo-1616848657269-c3c7b227fc65?w=400"
+        "https://images.unsplash.com/photo-1714326029322-fcc1464df757?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA1fHx0ZW50fGVufDB8fDB8fHwy"
       ],
       "location": "Bandipur, Nepal",
       "availability": "available"
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "Portable Tent Heater",
       "description": "Compact tent heater for chilly nights",
       "price": 500,
       "priceUnit": "day",
       "category": "outdoor",
       "images": [
-        "https://images.unsplash.com/photo-1616848657269-c3c7b227fc65?w=400"
+        "https://images.unsplash.com/photo-1714326029322-fcc1464df757?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA1fHx0ZW50fGVufDB8fDB8fHwy"
       ],
       "location": "Rara, Nepal",
       "availability": "available"
     },
     {
-      "id": 10,
+      "id": "10",
       "title": "Sleeping Bag",
       "description": "Warm and lightweight sleeping bag",
       "price": 600,
       "priceUnit": "day",
       "category": "outdoor",
       "images": [
-        "https://images.unsplash.com/photo-1616848657269-c3c7b227fc65?w=400"
+        "https://images.unsplash.com/photo-1714326029322-fcc1464df757?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA1fHx0ZW50fGVufDB8fDB8fHwy"
       ],
       "location": "Jomsom, Nepal",
       "availability": "available"
     },
     {
-      "id": 11,
+      "id": "11",
       "title": "Professional Drill Set",
       "description": "Complete drill set with various bits and accessories",
       "price": 500,
       "priceUnit": "day",
       "category": "tools",
       "images": [
-        "https://images.unsplash.com/photo-1572981779307-38f8b02c4f4a?w=400"
+        "https://images.unsplash.com/photo-1663638964046-4b576e739a3a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2NyZXdkcml2ZXJ8ZW58MHx8MHx8fDI%3D"
       ],
       "location": "Kathmandu, Nepal",
       "availability": "available"
     },
     {
-      "id": 12,
+      "id": "12",
       "title": "Power Tool Kit",
       "description": "Set of essential power tools for home projects",
       "price": 800,
       "priceUnit": "day",
       "category": "tools",
       "images": [
-        "https://images.unsplash.com/photo-1572981779307-38f8b02c4f4a?w=400"
+        "https://images.unsplash.com/photo-1663638964046-4b576e739a3a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2NyZXdkcml2ZXJ8ZW58MHx8MHx8fDI%3D"
       ],
       "location": "Lalitpur, Nepal",
       "availability": "available"
     },
     {
-      "id": 13,
+      "id": "13",
       "title": "Circular Saw",
       "description": "High-speed circular saw for carpentry work",
       "price": 1000,
       "priceUnit": "day",
       "category": "tools",
       "images": [
-        "https://images.unsplash.com/photo-1572981779307-38f8b02c4f4a?w=400"
+        "https://images.unsplash.com/photo-1663638964046-4b576e739a3a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2NyZXdkcml2ZXJ8ZW58MHx8MHx8fDI%3D"
       ],
       "location": "Pokhara, Nepal",
       "availability": "available"
     },
     {
-      "id": 14,
+      "id": "14",
       "title": "Welding Machine",
       "description": "Compact welding machine for metalwork",
       "price": 1200,
       "priceUnit": "day",
       "category": "tools",
       "images": [
-        "https://images.unsplash.com/photo-1572981779307-38f8b02c4f4a?w=400"
+        "https://images.unsplash.com/photo-1663638964046-4b576e739a3a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2NyZXdkcml2ZXJ8ZW58MHx8MHx8fDI%3D"
       ],
       "location": "Butwal, Nepal",
       "availability": "available"
     },
     {
-      "id": 15,
+      "id": "15",
       "title": "Ladder",
       "description": "10ft aluminum ladder, lightweight and durable",
       "price": 400,
       "priceUnit": "day",
       "category": "tools",
       "images": [
-        "https://images.unsplash.com/photo-1572981779307-38f8b02c4f4a?w=400"
+        "https://images.unsplash.com/photo-1663638964046-4b576e739a3a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2NyZXdkcml2ZXJ8ZW58MHx8MHx8fDI%3D"
       ],
       "location": "Bhaktapur, Nepal",
       "availability": "available"
     },
     {
-      "id": 16,
+      "id": "16",
       "title": "Paint Sprayer",
       "description": "Electric paint sprayer for smooth wall painting",
       "price": 600,
       "priceUnit": "day",
       "category": "tools",
       "images": [
-        "https://images.unsplash.com/photo-1572981779307-38f8b02c4f4a?w=400"
+        "https://images.unsplash.com/photo-1663638964046-4b576e739a3a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2NyZXdkcml2ZXJ8ZW58MHx8MHx8fDI%3D"
       ],
       "location": "Chitwan, Nepal",
       "availability": "available"
     },
     {
-      "id": 17,
+      "id": "17",
       "title": "Chainsaw",
       "description": "Powerful chainsaw for wood cutting",
       "price": 900,
       "priceUnit": "day",
       "category": "tools",
       "images": [
-        "https://images.unsplash.com/photo-1572981779307-38f8b02c4f4a?w=400"
+        "https://images.unsplash.com/photo-1663638964046-4b576e739a3a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2NyZXdkcml2ZXJ8ZW58MHx8MHx8fDI%3D"
       ],
       "location": "Hetauda, Nepal",
       "availability": "available"
     },
     {
-      "id": 18,
+      "id": "18",
       "title": "Angle Grinder",
       "description": "Angle grinder with safety guard and discs",
       "price": 700,
       "priceUnit": "day",
       "category": "tools",
       "images": [
-        "https://images.unsplash.com/photo-1572981779307-38f8b02c4f4a?w=400"
+        "https://images.unsplash.com/photo-1663638964046-4b576e739a3a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2NyZXdkcml2ZXJ8ZW58MHx8MHx8fDI%3D"
       ],
       "location": "Biratnagar, Nepal",
       "availability": "available"
     },
     {
-      "id": 19,
+      "id": "19",
       "title": "Toolbox Set",
       "description": "Complete toolbox for home repair needs",
       "price": 300,
       "priceUnit": "day",
       "category": "tools",
       "images": [
-        "https://images.unsplash.com/photo-1572981779307-38f8b02c4f4a?w=400"
+        "https://images.unsplash.com/photo-1663638964046-4b576e739a3a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2NyZXdkcml2ZXJ8ZW58MHx8MHx8fDI%3D"
       ],
       "location": "Janakpur, Nepal",
       "availability": "available"
     },
     {
-      "id": 20,
+      "id": "20",
       "title": "Electric Drill Machine",
       "description": "Heavy-duty drill machine for professional use",
       "price": 1100,
       "priceUnit": "day",
       "category": "tools",
       "images": [
-        "https://images.unsplash.com/photo-1572981779307-38f8b02c4f4a?w=400"
+        "https://images.unsplash.com/photo-1663638964046-4b576e739a3a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2NyZXdkcml2ZXJ8ZW58MHx8MHx8fDI%3D"
       ],
       "location": "Dharan, Nepal",
       "availability": "available"
     },
     {
-      "id": 21,
+      "id": "21",
       "title": "Electric Guitar",
       "description": "High-quality electric guitar with amplifier, perfect for gigs",
       "price": 1200,
@@ -274,7 +274,7 @@
       "availability": "available"
     },
     {
-      "id": 22,
+      "id": "22",
       "title": "DJ Lighting Kit",
       "description": "Full lighting system for parties, weddings, and events",
       "price": 1500,
@@ -287,7 +287,7 @@
       "availability": "available"
     },
     {
-      "id": 23,
+      "id": "23",
       "title": "Portable BBQ Grill",
       "description": "Charcoal grill for outdoor parties and gatherings",
       "price": 700,
@@ -300,7 +300,7 @@
       "availability": "available"
     },
     {
-      "id": 24,
+      "id": "24",
       "title": "Sound Mixer",
       "description": "Professional sound mixer for DJs and live performances",
       "price": 1000,
@@ -313,7 +313,7 @@
       "availability": "available"
     },
     {
-      "id": 25,
+      "id": "25",
       "title": "Party Tent",
       "description": "Large canopy tent for events, weddings, and parties",
       "price": 2000,
@@ -326,7 +326,7 @@
       "availability": "available"
     },
     {
-      "id": 26,
+      "id": "26",
       "title": "GoPro Camera",
       "description": "Action camera for adventure sports and travel",
       "price": 1000,
@@ -339,7 +339,7 @@
       "availability": "available"
     },
     {
-      "id": 27,
+      "id": "27",
       "title": "VR Headset",
       "description": "Virtual reality headset for gaming and immersive experiences",
       "price": 1500,
@@ -352,7 +352,7 @@
       "availability": "available"
     },
     {
-      "id": 28,
+      "id": "28",
       "title": "3D Printer",
       "description": "High-resolution 3D printer for prototypes and creative projects",
       "price": 2500,
@@ -365,7 +365,7 @@
       "availability": "available"
     },
     {
-      "id": 29,
+      "id": "29",
       "title": "Drone Camera Pro",
       "description": "4K camera drone for aerial photography and videography",
       "price": 3000,
@@ -378,7 +378,7 @@
       "availability": "available"
     },
     {
-      "id": 30,
+      "id": "30",
       "title": "Smart Projector",
       "description": "Portable projector with Wi-Fi, great for outdoor movie nights",
       "price": 1200,
@@ -391,7 +391,7 @@
       "availability": "available"
     },
     {
-      "id": 31,
+      "id": "31",
       "title": "Electric Drill Machine",
       "description": "Cordless drill machine with multiple drill bits",
       "price": 600,
@@ -404,7 +404,7 @@
       "availability": "available"
     },
     {
-      "id": 32,
+      "id": "32",
       "title": "Circular Saw",
       "description": "Powerful circular saw for wood and metal cutting",
       "price": 800,
@@ -417,7 +417,7 @@
       "availability": "available"
     },
     {
-      "id": 33,
+      "id": "33",
       "title": "Welding Machine",
       "description": "Portable welding machine for construction projects",
       "price": 1000,
@@ -430,7 +430,7 @@
       "availability": "available"
     },
     {
-      "id": 34,
+      "id": "34",
       "title": "Angle Grinder",
       "description": "Heavy-duty grinder for metal cutting and polishing",
       "price": 700,
@@ -443,7 +443,7 @@
       "availability": "available"
     },
     {
-      "id": 35,
+      "id": "35",
       "title": "Ladder Set",
       "description": "Adjustable multi-purpose ladder, great for painting and repairs",
       "price": 500,
@@ -456,20 +456,20 @@
       "availability": "available"
     },
     {
-      "id": 36,
+      "id": "36",
       "title": "Camping Stove",
       "description": "Portable gas camping stove with fuel canisters",
       "price": 400,
       "priceUnit": "day",
       "category": "outdoor",
       "images": [
-        "https://images.unsplash.com/photo-1616848657269-c3c7b227fc65?w=400"
+        "https://images.unsplash.com/photo-1714326029322-fcc1464df757?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA1fHx0ZW50fGVufDB8fDB8fHwy"
       ],
       "location": "Pokhara, Nepal",
       "availability": "available"
     },
     {
-      "id": 37,
+      "id": "37",
       "title": "Fishing Kit",
       "description": "Complete fishing rod set with tackle and accessories",
       "price": 600,
@@ -482,7 +482,7 @@
       "availability": "available"
     },
     {
-      "id": 38,
+      "id": "38",
       "title": "Climbing Rope",
       "description": "Durable rope for rock climbing and rappelling",
       "price": 300,
@@ -495,7 +495,7 @@
       "availability": "available"
     },
     {
-      "id": 39,
+      "id": "39",
       "title": "Sleeping Bag",
       "description": "Warm sleeping bag suitable for trekking and camping",
       "price": 500,
@@ -508,7 +508,7 @@
       "availability": "available"
     },
     {
-      "id": 40,
+      "id": "40",
       "title": "Binoculars",
       "description": "High-zoom binoculars for trekking and wildlife viewing",
       "price": 700,
@@ -521,36 +521,10 @@
       "availability": "available"
     },
     {
-      "id": 41,
-      "title": "API Test Listing 2",
-      "description": "Brand new DSLR camera",
-      "price": 1200,
-      "priceUnit": "day",
-      "category": "electronics",
-      "images": [
-        "https://images.unsplash.com/photo-1504198453319-5ce911bafcde?w=400"
-      ],
-      "location": "Kathmandu, Nepal",
-      "availability": "available"
-    },
-    {
-      "id": 42,
-      "title": "Test: Create Listing",
+      "id": "41",
+      "title": "New Demo Listing",
       "description": "High-zoom binoculars for trekking and wildlife viewing",
-      "price": 700,
-      "priceUnit": "day",
-      "category": "outdoor",
-      "images": [
-        "https://images.unsplash.com/photo-1504198453319-5ce911bafcde?w=400"
-      ],
-      "location": "Rara, Nepal",
-      "availability": "available"
-    },
-    {
-      "id": 100,
-      "title": "Test: Create Listing",
-      "description": "High-zoom binoculars for trekking and wildlife viewing",
-      "price": 700,
+      "price": 800,
       "priceUnit": "day",
       "category": "outdoor",
       "images": [
@@ -562,10 +536,22 @@
   ],
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "email": "demo@gmail.com",
       "password": "1234",
       "firstName": "John",
+      "lastName": "Doe",
+      "phone": "+1234567890",
+      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150",
+      "isVerified": true,
+      "rating": 4.8,
+      "createdAt": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "2",
+      "email": "jane@gmail.com",
+      "password": "1234",
+      "firstName": "Jane",
       "lastName": "Doe",
       "phone": "+1234567890",
       "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150",
@@ -576,27 +562,27 @@
   ],
   "categories": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Electronics",
       "slug": "electronics"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Sports Equipment",
       "slug": "sports"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Home & Garden",
       "slug": "home-garden"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Vehicles",
       "slug": "vehicles"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Clothing",
       "slug": "clothing"
     }

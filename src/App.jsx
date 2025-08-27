@@ -49,6 +49,8 @@ function App() {
           {/* Customer Routes - Protected
           <Route element={<ProtectedRoute />}>
           </Route> */}
+
+          {/* Customer Routes */}
           <Route path='/customer' element={<CustomerLayout />}>
             <Route index path='' element={<CustomerHome />} />
             {/* <Route path='listing/:id' element={<Listing />} /> */}
