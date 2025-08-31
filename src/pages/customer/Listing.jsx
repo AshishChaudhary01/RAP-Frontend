@@ -1,6 +1,6 @@
 // src/pages/customer/Listing.jsx
 import { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router';
+import { useParams, Link, NavLink } from 'react-router';
 import { useApi } from '../../hooks/useApi';
 import { api } from '../../services/api';
 import { useAuth } from '../../contexts/AuthContext';
@@ -29,7 +29,6 @@ function Listing() {
     const fetchListingData = async () => {
       try {
         const listingData = await callApi(() => api.getListing(id));
-        console.log('Listing data:', listingData); // Check if ownerId exists
         setListing(listingData);
 
         const listingReviews = await callApi(() => api.getReviews(id));
@@ -102,7 +101,7 @@ function Listing() {
   return (
     <div className="max-w-6xl mx-auto pb-24"> {/* Extra padding for sticky section */}
       {/* Header */}
-      <div className="bg-white p-4 sticky top-20 z-10">
+      <div className="bg-white p-4 sticky top-[65px] z-10 border-b border-gray-300">
         <div className="max-w-4xl mx-auto">
           <Link to="/customer" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4">
             <HiOutlineArrowLeft className="h-5 w-5 mr-2" />
@@ -212,17 +211,21 @@ function Listing() {
               <span>{listing.location}</span>
             </div>
 
+            {/* Item Available */}
             {listing.availability === 'available' && (
               <div className="flex items-center text-green-600 mb-6">
                 <HiOutlineShieldCheck className="h-5 w-5 mr-2" />
                 <span className="font-medium">Available for rent</span>
               </div>
             )}
-            {listing.ownerId === id ? (
+
+            {/* User Loggedin and user is the owner of the listed item */}
+            {user && listing.ownerId === user.id(
               <div className="bg-yellow-50 border border-yellow-200 text-yellow-800 p-3 rounded-lg mb-4">
                 <p className="text-sm">You are the owner of this listing.</p>
               </div>
-            ) : listing.availability !== 'available' ? (
+            )}
+            {listing.availability !== 'available' && (
               <div className="bg-red-50 border border-red-200 text-red-800 p-4 rounded-lg">
                 <div className="flex items-center">
                   <HiOutlineX className="h-5 w-5 mr-2" />
@@ -237,7 +240,18 @@ function Listing() {
                   </div>
                 </div>
               </div>
-            ) : (
+            )}
+
+            {!user && listing.availability === "available" && (
+              <div className='flex justify-center text-white mb-6 font-bold bg-indigo-600 py-3 rounded-md'>
+                <NavLink to="/auth/login" className="inline-flex items-center text-white hover:text-white">
+                  <HiOutlineShieldCheck className="h-5 w-5 mr-2 flex my-auto" /> <span className='px-2'>Login to rent this item!</span>
+                </NavLink>
+              </div>
+            )}
+
+            {/* User Loggedin and user is not the owner of the listed item */}
+            {user && listing.ownerId !== user.id && listing.availability === "available"(
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
