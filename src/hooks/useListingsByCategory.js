@@ -7,6 +7,7 @@ export const useListingsByCategory = () => {
     newest: [],
     outdoor: [],
     tools: [],
+    party: [],
   });
 
   const { loading, error, callApi } = useApi();
@@ -14,7 +15,6 @@ export const useListingsByCategory = () => {
   const fetchListingsByCategory = async () => {
     try {
       const allListings = await callApi(api.getListings);
-      console.log('API response:', allListings);
 
       if (!Array.isArray(allListings)) {
         throw new Error('Invalid response format from API');
@@ -27,11 +27,15 @@ export const useListingsByCategory = () => {
       const toolsListings = allListings.filter(listing =>
         listing.category === 'tools' || listing.category === 'home-garden'
       );
+      const partyListings = allListings.filter(listing =>
+        listing.category === 'party' || listing.category === 'party'
+      );
 
       setListingsByCategory({
         newest: newestListings,
         outdoor: outdoorListings,
         tools: toolsListings,
+        party: partyListings,
       });
     } catch (err) {
       console.error('Failed to fetch listings:', err);

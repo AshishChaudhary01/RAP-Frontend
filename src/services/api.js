@@ -1,15 +1,7 @@
-// src/services/api.js - Updated with actual fetch calls
 class ApiService {
   constructor(baseURL = 'http://localhost:3001') {
     this.baseURL = baseURL;
-
-    // Bind methods to maintain 'this' context
-    this.request = this.request.bind(this);
-    this.getListings = this.getListings.bind(this);
-    this.getListing = this.getListing.bind(this);
-    this.createListing = this.createListing.bind(this);
-    this.updateListing = this.updateListing.bind(this);
-    this.deleteListing = this.deleteListing.bind(this);
+    // Remove all .bind() calls from constructor since we're using arrow functions
   }
 
   async request(endpoint, options = {}) {
@@ -41,21 +33,7 @@ class ApiService {
     }
   }
 
-  // Mock user data for development
-  mockUsers = [
-    {
-      id: 1,
-      email: 'demo@example.com',
-      password: 'demo',
-      firstName: '1234',
-      lastName: 'User',
-      avatar: 'https://images.unsplash.com/photo-1740252117070-7aa2955b25f8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGF2YXRhcnxlbnwwfDJ8MHx8fDI%3D',
-      isVerified: true,
-      rating: 4.5
-    }
-  ];
-
-  // Use arrow functions to automatically bind 'this'
+  // ✅ Use arrow functions consistently (they auto-bind 'this')
   getListings = async () => {
     return this.request('/listings');
   }
@@ -73,7 +51,7 @@ class ApiService {
 
   updateListing = async (id, listingData) => {
     return this.request(`/listings/${id}`, {
-      method: 'PUT',
+      method: 'PATCH',
       body: listingData,
     });
   }
@@ -84,8 +62,7 @@ class ApiService {
     });
   }
 
-  async login(credentials) {
-    // Simulate API call to db.json users
+  login = async (credentials) => {
     const users = await this.request('/users');
     const user = users.find(u =>
       u.email === credentials.email && u.password === credentials.password
@@ -107,12 +84,55 @@ class ApiService {
     };
   }
 
-  async register(userData) {
-    // POST to users endpoint
+  register = async (userData) => {
     return this.request('/users', {
       method: 'POST',
       body: userData
     });
+  }
+
+  getReviews = async (listingId) => {
+    return this.request(`/reviews?listingId=${listingId}`);
+  }
+
+  createRental = async (rentalData) => {
+    return this.request('/rentals', {
+      method: 'POST',
+      body: rentalData,
+    });
+  }
+
+  getRentals = async () => {
+    return this.request('/rentals');
+  }
+
+  getRental = async (id) => {
+    return this.request(`/rentals/${id}`);
+  }
+
+  updateRentalStatus = async (id, status) => {
+    return this.request(`/rentals/${id}`, {
+      method: 'PATCH',
+      body: { status },
+    });
+  }
+
+  getMyRentals = async () => {
+    const rentals = await this.getRentals();
+    const currentUserId = JSON.parse(localStorage.getItem('user'))?.id;
+    return rentals.filter(rental => rental.renterId === currentUserId);
+  }
+
+  getRentalRequests = async () => {
+    const rentals = await this.getRentals();
+    const currentUserId = JSON.parse(localStorage.getItem('user'))?.id;
+    return rentals.filter(rental => rental.ownerId === currentUserId);
+  }
+
+  getMyListings = async () => {
+    const listings = await this.getListings();
+    const currentUserId = JSON.parse(localStorage.getItem('user'))?.id;
+    return listings.filter(listing => listing.ownerId === currentUserId);
   }
 }
 

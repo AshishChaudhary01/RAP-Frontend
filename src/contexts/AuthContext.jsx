@@ -19,16 +19,20 @@ export const AuthProvider = ({ children }) => {
     const initAuth = async () => {
       const token = localStorage.getItem('token');
       const userData = localStorage.getItem('user');
-      
+
       if (token && userData) {
         try {
-          setUser(JSON.parse(userData));
+          const parsedUser = JSON.parse(userData);
+          setUser(parsedUser);
         } catch (error) {
-          console.error('Error parsing user data:', error);
+          console.error('AuthProvider: Error parsing user data:', error);
           localStorage.removeItem('token');
           localStorage.removeItem('user');
         }
+      } else {
+        console.log('AuthProvider: No auth data found');
       }
+
       setLoading(false);
     };
 
@@ -38,11 +42,11 @@ export const AuthProvider = ({ children }) => {
   const login = async (credentials) => {
     try {
       const response = await api.login(credentials);
-      
+
       // Store in localStorage
       localStorage.setItem('token', response.token);
       localStorage.setItem('user', JSON.stringify(response.user));
-      
+
       setUser(response.user);
       return response;
     } catch (error) {

@@ -24,7 +24,7 @@ function ListingSlider({ items, category }) {
             {transformedItems.map((item) => (
               <Link
                 key={item.id}
-                to={`/listing/${item.id}`}
+                to={`/customer/listings/${item.id}`}
                 className="flex-shrink-0 w-28 md:w-40 lg:w-48 hover:scale-103 transition-transform duration-500"
               >
                 {/* Image container with 1:1 aspect ratio */}

@@ -46,6 +46,12 @@ function CustomerHome() {
         items={listingsByCategory.tools}
         category="Tools"
       />
+
+      {/* Party Listings */}
+      <ListingSlider
+        items={listingsByCategory.party}
+        category="Party"
+      />
     </div>
   );
 }
