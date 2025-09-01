@@ -220,7 +220,7 @@ function Listing() {
             )}
 
             {/* User Loggedin and user is the owner of the listed item */}
-            {user && listing.ownerId === user.id(
+            {user && listing.ownerId === user.id && (
               <div className="bg-yellow-50 border border-yellow-200 text-yellow-800 p-3 rounded-lg mb-4">
                 <p className="text-sm">You are the owner of this listing.</p>
               </div>
@@ -251,7 +251,7 @@ function Listing() {
             )}
 
             {/* User Loggedin and user is not the owner of the listed item */}
-            {user && listing.ownerId !== user.id && listing.availability === "available"(
+            {user && listing.ownerId !== user.id && listing.availability === "available" &&(
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
