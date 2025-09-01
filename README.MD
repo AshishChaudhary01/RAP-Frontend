@@ -37,8 +37,8 @@ A **Peer-to-Peer Rental Platform** web application prototype built with **React*
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/rent-anything-platform.git
-cd rent-anything-platform
+git clone https://github.com/AshishChaudhary01/RAP-Frontend.git
+cd RAP-Frontend
 ```
 
 ### 2. Install dependencies
